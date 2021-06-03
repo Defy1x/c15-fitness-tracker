@@ -30,7 +30,7 @@ For this assignment, you'll create a workout tracker. You have already been prov
 
 
 ## Deployed Link
-Will be added shortly.
+https://polar-badlands-54663.herokuapp.com/
 
 
 #Usage
