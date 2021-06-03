@@ -10,7 +10,12 @@ app.use(express.urlencoded({extended: false}));
 app.use(express.static(path.join(__dirname, "public")));
 app.use(require("./controllers"));
 
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workout", { useNewUrlParser: true });
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workout", {
+  useNewUrlParser: true,
+  useUnifiedTopology:true,
+  useCreateIndex: true,
+  useFindAndModify: false
+});
 
 app.listen(PORT, () => {
     console.log(`Now listening on PORT ${PORT}!`)
